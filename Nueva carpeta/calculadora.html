@@ -1,0 +1,52 @@
+[5:38 p.m., 16/9/2024] .: @page
+@model IndexModel
+@{
+    ViewData["Title"] = "Tabla de Multiplicar";
+}
+
+<h1>Tabla de Multiplicar</h1>
+
+<p>Ingresa un número para generar su tabla de multiplicar (del 0 al 15):</p>
+
+<form method="post">
+    <input type="number" name="numero" placeholder="Número" required />
+    <button type="submit">Generar Tabla</button>
+</form>
+
+@if (Model.Resultado != null)
+{
+    <div class="result">
+        <h3>Tabla de multiplicar del @Model.Numero:</h3>
+        <ul>
+            @foreach (var linea in Model.Resultado)
+            {
+                <li>@linea</li>
+            }
+        </ul>
+    </div>
+}
+[5:38 p.m., 16/9/2024] .: 
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
+
+namespace TuProyecto.Pages
+{
+    public class IndexModel : PageModel
+    {
+        [BindProperty]
+        public int Numero { get; set; }
+        public List<string> Resultado { get; set; }
+
+        public void OnPost()
+        {
+            Resultado = new List<string>();
+
+            for (int i = 0; i <= 15; i++)
+            {
+                Resultado.Add($"{i} x {Numero} = {i * Numero}");
+            }
+        }
+    }
+}

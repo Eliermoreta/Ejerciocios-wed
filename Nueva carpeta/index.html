@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Más - Blazor</title>  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #4A90E2;
+            margin-top: 20px;
+        }
+        .video-container {
+            margin: 30px auto;
+            width: 90%;
+            max-width: 800px; /* Aumenta el tamaño máximo del video */
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .description {
+            font-size: 1.1em;
+            margin: 15px 0;
+            color: #555;
+            text-align: center; /* Centra el texto */
+            padding: 0 10px; /* Añade un poco de espacio a los lados */
+        }
+        .feedback {
+            font-style: italic;
+            color: #007acc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aprende Más Sobre Blazor</h1>
+
+    <!-- Video 1 -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/bMwD3tHq8XY" allowfullscreen></iframe>
+    </div>
+    <p class="description">
+        <strong>Blazor: El futuro de las aplicaciones web</strong><br>
+        En este video se explican los fundamentos de Blazor y cómo está cambiando el desarrollo de aplicaciones web. 
+        <span class="feedback">Lo que me gustó: Me encantó la claridad con la que se explica la arquitectura de Blazor y sus ventajas sobre otras tecnologías.</span>
+    </p>
+
+    <!-- Video 2 -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Ln7MUQk6voA" allowfullscreen></iframe>
+    </div>
+    <p class="description">
+        <strong>Introducción a Blazor Server y Blazor WebAssembly</strong><br>
+        Este video ofrece una comparación detallada entre Blazor Server y Blazor WebAssembly, ayudando a entender cuándo usar cada uno.
+        <span class="feedback">Lo que me gustó: La comparación entre las dos modalidades de Blazor me ayudó a decidir cuál es mejor para mis proyectos.</span>
+    </p>
+
+    <!-- Video 3 -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/_buIm4AUcgo" allowfullscreen></iframe>
+    </div>
+    <p class="description">
+        <strong>Blazor: Creando componentes reutilizables</strong><br>
+        En este tutorial se enseña cómo crear componentes reutilizables en Blazor, una habilidad esencial para proyectos escalables.
+        <span class="feedback">Lo que me gustó: La explicación sobre componentes reutilizables es clara y fácil de seguir, perfecto para mejorar la organización del código.</span>
+    </p>
+
+    <!-- Video 4 -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/u_zllynRo6o" allowful
+
